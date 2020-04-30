@@ -4,19 +4,14 @@
 body{
   width:100%;
 },
+}
 .main {
     /*把里面的盒子挤下去*/
     padding-top: 90px;
-    width:100%;
-},
-.main-slider {
-    width:100%;
-}
 }
 .main-slider {
     cursor: pointer;
     height: 420px;
-    width:100%;
     /*background-color: rgba(0.5, 0.5, 0, 0.2);*/
     /*background: url("../images/big1.jpg") no-repeat;*/
     /*图片铺满背景*/
@@ -25,9 +20,8 @@ body{
     /*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/www/images/big1.jpg', sizingMethod="scale");*/
     margin-top: 15px;
     position: relative;
-    float: right;
+    z-index:1;
     overflow: hidden;
-
     /*给盒子添加四周阴影的效果*/
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
@@ -278,6 +272,20 @@ body{
     cursor: pointer;
     z-index: 1;
 }
+.movies-img1 {
+    float: left;
+    display: block;
+    width: 195px;
+    height: 200px;
+    font: 400 18px/262px 'Microsoft YaHei';
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+    background-image: url('../../images/big5.jpg');
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-Size:cover;
+}
 .movies-img img {
     /*如果图片大小不做定义，则页面需要重新渲染，速度受到影响*/
     width: 195px;
@@ -285,6 +293,11 @@ body{
     float: left;
     border-radius: 10px;
 }
+.movies-img button
+    {
+        background-image: url('../../images/big0.jpg');
+        background-repeat: no-repeat;
+    }
 
 .movies-info {
     margin-top: 1px;
@@ -364,6 +377,15 @@ body{
 .score-strong {
     font-Size: 24px;
 }
+.buttonzc{
+height: 80px;
+line-height: 40px;
+width: 195px;
+float: left;
+color:#000;
+cursor: pointer;
+padding-right: 0;
+}
 .movies-play {
     display: block;
     /*background-color: yellow;*/
@@ -375,6 +397,22 @@ body{
     color: #000;
     cursor: pointer;
     border: 1px solid #2fa4e7;
+
+}
+.movies-play1 {
+    display: block;
+    /*background-color: yellow;*/
+    font: 400 18px/40px 'Microsoft YaHei';
+    height: 200px;
+    line-height: 40px;
+    width: 100%;
+    float: left;
+    color: #000;
+    cursor: pointer;
+    border: 1px solid #2fa4e7;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-Size:cover;
 }
 
 .movies-play:hover {
@@ -410,3 +448,8 @@ body{
 }
 
 /*movies end*/
+.juzhong{
+            display: flex;
+            justify-content: center; //水平居中
+            align-items: center;//垂直居中
+}
