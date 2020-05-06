@@ -3,6 +3,12 @@
 /**
     标签内外边距清零
  */
+		html,body{
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
 html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
     margin: 0;
     padding: 0;
@@ -31,7 +37,7 @@ select, input {
 }
 
 select, input, textarea {
-    font-size: 12px;
+    font-size: 1.2%;
     margin: 0;
 }
 
@@ -108,7 +114,8 @@ span div            1
 /*公共类*/
 .w {
     /*版心 提取 */
-    width: 1210px;
+    width: 80%;
+    height:100%;
     /*样式的居中*/
     /*一般是安装上右下左的顺序进行解析的*/
     /*如果是两个的话，先上下、后左右*/
@@ -170,58 +177,62 @@ span div            1
     filter:progid:DXImageTransform.Microsoft.Shadow(Strength=4,Direction=135,Color='#000000');
     filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=125, Strength=5);
 
-    position: fixed;
+/*    position: fixed;*/
     z-index: 1;
 }
 .site-nav-logo {
-    width: 205px;
-    height: 40px;
+    width: 15%;
+    height: 4%;
     /*background-color: #C81623;*/
     padding: 16px 0 16px 30px;
     float: left;
 }
 .site-nav-logo .logo {
-    font: 700 25px/150% 'Microsoft YaHei';
+    font-size:1.5vw;
     color: red;
 }
 .site-nav-logo img {
     padding-right: 3px;
-    width: 30px;
-    width: 30px;
+    width: 15%;
+    height: 15%;
 }
 .site-nav-search {
     float: left;
-    margin-left: 145px;
-    margin-top: 16px;
+    margin-left: 10%;
+    margin-top: 1.5%;
+    width:30%;
+    height:20%;
 }
 .site-nav-search input {
     float: left;
-    height: 34px;
-    width: 176px;
+    height: 50%;
+    width: 50%;
     border: 1px solid #CCCCCC;
     color: #CCCCCC;
-    font: 400 14px/34px 'Microsoft YaHei';
+    font-size:1vw;
 }
 .site-nav-search button {
     margin-left: -1px;
     float: left;
-    height: 36px;
-    width: 78px;
+    height: 100%;
+    width: 20%;
     background-color: #fff;
     border: 1px solid #CCCCCC;
     cursor: pointer;
+    font-size:1vw;
 }
 .site-nav-search button:hover {
     background-color: #CCCCCC;
 }
 .site-nav-r {
     float: right;
+    width:35%;
 }
 .site-nav-r ul li {
     float: left;
-    margin-top: 16px;
-    font: 700 16px/30px 'Microsoft YaHei';
-    margin-left: 60px;
+    margin-top: 5%;
+    font-size:1vw;
+    margin-left: 12%;
 }
 .site-nav-user {
     float: left;

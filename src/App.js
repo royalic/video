@@ -5,7 +5,9 @@ class App extends Component {
     constructor(props){
        super(props);
        this.toggleMovieButton=this.toggleMovieButton.bind(this);
-       this.state={type:[1],link:[],movietype:['movies-content']};
+       this.playMovieButton=this.playMovieButton.bind(this);
+       this.closePop=this.closePop.bind(this);
+       this.state={type:[1],link:[],movietype:['movies-content'],movieplay:['none'],playmovie:['images/1.mp4'],};
     }
  toggleMovieButton(e){
    console.log(e.target.attributes.name);
@@ -25,6 +27,47 @@ console.log(this.state.link);
 }
 )
 } 
+  playMovieButton(e){
+    this.setState({playmovie:e.target.attributes.value.nodeValue,movieplay:'block'});
+    console.log(e.target.attributes.value.nodeValue,'playMovieButton',this.state.movieplay);
+};
+   closePop(e){
+   console.log(e,'closePop')
+   this.setState({movieplay:'none'})};
+  playmovieshow(){
+   if(this.state.movieplay=='block'){
+   var showplay={
+      width:'80%',
+      height:'50%',
+      top:'25%',
+      position:'fixed',
+      background:'#000',
+      display:this.state.movieplay
+};
+  var buttonshow={
+      width:'5%',
+      height:'10%',
+      float: 'left',
+      top:'25%',
+      background:'blue',
+      position:'fixed',}
+  var likeshow={
+      width:'5%',
+      height:'10%',
+      float: 'left',
+      top:'35%',
+      background:'red',
+      position:'fixed',}
+    return(
+<div class="main" onClick={this.closePop}>
+        <div style={{height:'100%'}}>
+            <div><button  onClick={this.closPop} style={buttonshow}>关闭</button><br/></div>
+            <div><iframe  src={this.state.playmovie} style={showplay}></iframe></div>
+            <div><button style={likeshow}>like</button></div>
+        </div>
+</div>
+)}
+  }
 testone(){
     const elements=[];
     this.state.link.forEach((item,index)=>{
@@ -45,9 +88,9 @@ testone(){
 };
 //let screenWidth = Dimensions.get('window').width;
       elements.push(
-                 <li>
+                 <li  >
                     <div>
-                    <button class="video_iframe" style={background}> ▶&nbsp;播放</button>     
+                    <button class="video_iframe" style={background} value={item.link} onClick={this.playMovieButton}> ▶&nbsp;播放</button>     
                     </div>
                     <div class="movies-info">
                         <span class="movie-name">视频类{item.name}</span>
@@ -59,7 +102,6 @@ testone(){
     return(
       <div class={this.state.movietype} style={{display: 'block',}}>
         <br />
-        <br />
             <ul>
         {elements}
             </ul>
@@ -70,6 +112,7 @@ testone(){
 componentWillMount(){
 this.getData();
 this.testone();
+this.playmovieshow();
 }
   render() {
   return (
@@ -87,19 +130,15 @@ this.testone();
         </div>
         <div class="site-nav-r">
             <ul>
-                <li><a href="index.html">电影</a></li>
-                <li><a href="login.html">登录</a></li>
-                <li><a href="register.html">注册</a></li>
-                <li><a href="index.html">退出</a></li>
-                <li><a href="user.html">会员</a></li>
+                <li><a href="/">电影</a></li>
+                <li><a href="/#/login">登录</a></li>
+                <li><a href="/register">注册</a></li>
+                <li><a href="https://www.baidu.com/">退出</a></li>
+                <li><a href="/member">会员</a></li>
             </ul>
         </div>
     </div>
 </div>
-            <br />
-            <br />
-            <br />
-            <br />
 <div class="main" >
     <div class="w">
         <div class="main-slider">
@@ -132,11 +171,7 @@ this.testone();
             </ul>
         </div>
         {this.testone()}
-<div class="site-nav2" >
-        <div style={{height:'200px'}}>
-            <iframe  src="images/1.mp4" style={{width:'100%',marginleft: '50%',background:'#fff',}}></iframe>
-        </div>
-</div>
+        {this.playmovieshow()}
     </div>
 </div>
 </div>
