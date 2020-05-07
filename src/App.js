@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import React, { Component } from 'react';
 import { Select } from 'antd';
+import {Link} from 'react-router-dom';
 class App extends Component {
     constructor(props){
        super(props);
@@ -130,11 +131,11 @@ this.playmovieshow();
         </div>
         <div class="site-nav-r">
             <ul>
-                <li><a href="/">电影</a></li>
-                <li><a href="/#/login">登录</a></li>
-                <li><a href="/register">注册</a></li>
+                <li><Link to="/">电影</Link></li>
+                <li><Link to="/login">登陆</Link></li>
+                <li><a href="/#/register">注册</a></li>
                 <li><a href="https://www.baidu.com/">退出</a></li>
-                <li><a href="/member">会员</a></li>
+                <li><a href="/#/member">会员</a></li>
             </ul>
         </div>
     </div>

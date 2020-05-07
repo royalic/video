@@ -4,15 +4,18 @@ import { Select } from 'antd';
 class login extends Component {
     constructor(props){
        super(props);
-       this.toggleMovieButton=this.toggleMovieButton.bind(this);
-       this.playMovieButton=this.playMovieButton.bind(this);
-       this.closePop=this.closePop.bind(this);
-       this.state={type:[1],link:[],movietype:['movies-content'],movieplay:['none'],playmovie:['images/1.mp4'],};
+       this.state={};
     }
   render() {
   return (
 <div>
-<h1>2142153</h1>
+     <div className='onclick2'>
+     <form action="http://127.0.0.1:8081/login" method='post'>
+        用户名：<input type='text' name='name' style={{width:'100%',height:'30px',}}/><br/>
+        密  码：<input type='password' name='password' style={{width:'100%',height:'30px',}}/><br/>
+        <input type="submit" value='登陆'style={{width:'100%',height:'30px',background:'#38f',}}/><br/>
+     </form>
+     </div>
 </div>
   );
 }

@@ -37,7 +37,7 @@ select, input {
 }
 
 select, input, textarea {
-    font-size: 1.2%;
+    font-size: 1vw;
     margin: 0;
 }
 
@@ -322,3 +322,46 @@ span div            1
     height: 190px;
 }
 /*footer end*/
+.onclick2{
+    margin-left:33%;
+    width:34%;
+    height:30%;
+    top:5%;
+    background-color:#99dd;
+}
+.onclick2 form div{
+   margin:4%;
+}
+.onclick2 form h1{
+   
+   text-align:center;
+   font-size:2.5vw;
+}
+.onclick2 form label{
+    text-align:bottom;
+   margin-top:20%;
+    top:30%;
+    color:white;
+    font-size:2vw;
+}
+.onclick2 form input{
+    margin-top:0%;
+    width:70%;
+    height:2.5vw;
+    text-align:top;
+    font-size:1.5vw;
+}
+.onclick2 form button{
+    margin-left:33%;
+    width:33%;
+    margin-top:5%;
+    height:20%;
+    background-color:#3954db;
+    font-size:2.5vw;
+}
+.memberinfo{
+    margin-left:16%;
+    width:68%;
+    height:100%;
+}
+
