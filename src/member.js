@@ -20,10 +20,19 @@ class member extends Component {
             </div>
          </div>
          <div style={{width:'50%',height:'100%',float:'left',}}>
-            <h1>asdf</h1>
+            <div class='personinfo'>123</div>
+            <div class='changeinfo'>234</div>
+            <div class='shareinfo'>345</div>
+            <div class='likeinfo'>456</div>
          </div>
          <div style={{width:'25%',height:'100%',float:'left',}}>
-            <h1>asdf</h1>
+            <div class='userimg'>123</div>
+            <div class='username'>234</div>
+            <div class='userinfo'>
+                  <div class='usershare' style={{width:'50%',height:'100%',float:'left',}}>123</div>
+                  <div class='userlike' style={{width:'50%',height:'100%',float:'left',}}>234</div>
+            </div>
+
          </div>
      </div>
   );
